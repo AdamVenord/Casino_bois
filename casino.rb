@@ -1,51 +1,54 @@
 require "pry"
+
 $wallet = []
 $Player = []
 $Age = []
 class Greeting
-  def intialize 
+  def intial
     hi
   end
   def hi
     puts "WELCOME TO THE CASINO"
-   puts "PUT NAME"
-   player = gets.strip
-   $Player.push(player)
-   puts "Hello " + "#{player}"
-   puts  "PUT AGE"
-   age = gets.to_i
+    puts "PUT NAME"
+    player = gets.strip
+    $Player.push(player)
+    puts "Hello " + "#{player}"
+    puts  "PUT AGE"
+    age = gets.to_i
     if age >= 21 
-   then 
-    $Age.push(age)
-     "Come on in"
-     puts "HOW MANY CHIPS YOU WANT?"
+      then 
+      $Age.push(age)
+      "Come on in"
+      puts "HOW MANY CHIPS YOU WANT?"
       chips = gets.to_i
       $wallet.push(chips)
     else
-     puts "UNDERAGE"
-     exit
+      puts "UNDERAGE"
+      exit
     end
-
-
+        
   end
 end
 
-class Menu
-  def intialize
+class Cmenu
+  def initialize
     casinomenu
   end
   
   def casinomenu
     puts "PICK YOUR GAME"
-    puts "PRESS 1: game 2: game 3: game 4: Remaining Chips 5: Exit "
+    puts "PRESS 1: RPS 2: COIN 3: BEANS 4: Remaining Chips 5: Exit "
     choice = gets.to_i
     
     if choice == 1
-      game
+      require_relative "Rps.rb"
+      Rpsgame.new
     elsif choice == 2
-      game
+      require_relative "Coinflip.rb"
+        Coinflip.new
     elsif choice ==  3
-      game
+      require_relative "Beans.rb"
+      Beans.new
     elsif choice == 4
       chaching = $wallet.sum
       print "$"
@@ -64,7 +67,7 @@ class Menu
   end
 end
 
-Greeting.new.intialize
-Menu.new.intialize
+Greeting.new.intial
+Cmenu.new.initialize
 
 # git remote add origin https://github.com/AdamVenord/Casino_bois.git

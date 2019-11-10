@@ -1,6 +1,6 @@
 require "colorize"
  
- class Rpsgame
+class Rpsgame
 
   def initialize
 
@@ -8,7 +8,7 @@ require "colorize"
       "We got rock".colorize(:red), 
       "we got scissors".colorize(:green),
       "we got paper".colorize(:yellow)
-  ]
+     ]
     menu
 
   end
@@ -17,7 +17,7 @@ require "colorize"
     puts " "
     puts "Wanna fight?"
     puts "1) Bees knees dog sauce"
-    puts "2) Nah brah Im out, I like my scissors intack"
+    puts "2) Nah brah Im out, I like my scissors intact"
     choice = gets.to_i
     
     case choice
@@ -25,7 +25,8 @@ require "colorize"
       menu2
     when 2
       puts "Toodaloo"
-      exit
+      require_relative "casino.rb"
+      Casino.Cmenu.initialize
     else
       puts " "
       puts "Can you run that by me again?"
@@ -111,4 +112,4 @@ require "colorize"
 
 end
 
- Rpsgame.new
+ Rpsgame.new.initialize
