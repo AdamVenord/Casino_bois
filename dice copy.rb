@@ -34,7 +34,7 @@ while true
 		puts 'Guess Your Roll'.colorize(:green)
 	else 'exit'
 			puts 'goodbye'
-			exit
+			Cmenu.new.initialize
 	end
 	total = gets.chomp
 	dice_total = ((1 + rand(6))+(1 + rand(6)))

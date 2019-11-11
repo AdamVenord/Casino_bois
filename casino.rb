@@ -39,7 +39,7 @@ class Cmenu
   def casinomenu
     puts "PICK YOUR GAME"
     puts "1: RPS" 
-    puts "2: COIN" 
+    puts "2: DICE GAME"
     puts "3: BEANS"
     puts "4: Remaining Chips"
     puts "5: Exit"
@@ -49,8 +49,8 @@ class Cmenu
       require_relative "Rps.rb"
       Rpsgame.new
     elsif choice == 2
-      require_relative "Coinflip.rb"
-        Coinflip.new
+      require_relative "dice copy.rb"
+        
     elsif choice ==  3
       require_relative "Beans.rb"
       Beans.new
@@ -76,3 +76,5 @@ Greeting.new.intial
 Cmenu.new.initialize
 
 # git remote add origin https://github.com/AdamVenord/Casino_bois.git
+
+# rails new blog_winter19 -d postgresql
