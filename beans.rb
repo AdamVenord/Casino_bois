@@ -27,7 +27,8 @@ class Beans
     when 3
       puts " "
       puts "Only the cool kids apperently"
-      exit
+      #require_relative "casino.rb"
+      Cmenu.new.initialize
     else 
       puts "Pardon moi?"
       menu

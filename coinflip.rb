@@ -21,7 +21,8 @@
       flip_coin
     when 2
       puts "Toodaloo"
-      exit
+      #require_relative "casino.rb"
+      Cmenu.new.initialize
     else
       puts " "
       puts "Can you run that by me again?"

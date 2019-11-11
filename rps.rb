@@ -1,4 +1,5 @@
 require "colorize"
+require "pry"
  
 class Rpsgame
 
@@ -25,8 +26,8 @@ class Rpsgame
       menu2
     when 2
       puts "Toodaloo"
-      require_relative "casino.rb"
-      Casino.Cmenu.initialize
+      # require_relative "casino.rb"
+      Cmenu.new.initialize
     else
       puts " "
       puts "Can you run that by me again?"

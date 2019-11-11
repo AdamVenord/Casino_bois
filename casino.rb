@@ -1,4 +1,5 @@
 require "pry"
+require "colorize"
 
 $wallet = []
 $Player = []
@@ -37,7 +38,11 @@ class Cmenu
   
   def casinomenu
     puts "PICK YOUR GAME"
-    puts "PRESS 1: RPS 2: COIN 3: BEANS 4: Remaining Chips 5: Exit "
+    puts "1: RPS" 
+    puts "2: COIN" 
+    puts "3: BEANS"
+    puts "4: Remaining Chips"
+    puts "5: Exit"
     choice = gets.to_i
     
     if choice == 1
@@ -51,7 +56,7 @@ class Cmenu
       Beans.new
     elsif choice == 4
       chaching = $wallet.sum
-      print "$"
+      print "$".colorize(:green)
       puts  chaching
       casinomenu
     elsif choice == 5
