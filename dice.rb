@@ -14,7 +14,7 @@ def initialize
 puts 'Lets see how you Roll'.colorize(:red)
 puts 'win by guessing your total from rolling 2 dice'.colorize(:red)
 puts 'Good Luck'.colorize(:green)
-chips = 100
+chips = $wallet.sum
 while chips > 0
 	
     puts 'Put Your Money Where Your Mouth is you have'.colorize(:red) + chips.to_s + ' chips left Bruh!'.colorize(:green)
@@ -26,7 +26,7 @@ while chips > 0
     
 
 while true
-		if (chips.to_i - bet.to_i) < 0
+		if (chips.to_i <= bet.to_i) 
             puts 'You Do Not Have Enough Chips Bruh'.colorize(:red)
 			bet = gets.chomp
 			Cmenu.new.initialize

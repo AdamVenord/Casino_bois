@@ -49,8 +49,8 @@ class Cmenu
       require_relative "Rps.rb"
       Rpsgame.new
     elsif choice == 2
-      require_relative "dice copy.rb"
-        
+      require_relative "dice.rb"
+        Dice.new
     elsif choice ==  3
       require_relative "Beans.rb"
       Beans.new
